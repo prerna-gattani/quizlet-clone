@@ -125,7 +125,6 @@ function animateValue(id, start, end, duration, suffix = '') {
 
 window.onload = function () {
     setTimeout(() => {
-        // Delay the animations by 2 seconds (2000ms) after page load
         setTimeout(() => {
             animateValue('students', 0, 29300, 1800);
             animateValue('classes', 0, 32400, 1800);
@@ -134,3 +133,17 @@ window.onload = function () {
         }, 10000); // Adjust this delay as needed
     }, 300);
 };
+
+
+// Simulate loading time (adjust as needed)
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    const content = document.getElementById("main-content");
+  
+    // You can remove the timeout and call this when real content loads
+    setTimeout(() => {
+      loader.classList.add("fade-out");
+      content.style.display = "block";
+    }, 2500); // 2.5 seconds
+  });
+  
